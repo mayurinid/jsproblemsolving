@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSPROBLEM SOLVING</title>
+</head>
+<body>
+    <pre>
+    Question 1.Find the Smaller Angle
+    PrepBuddy has an analog clock which consists of two hands one for hour and another for minute. She wants to calculate the shorter angle formed between hour and minute hand at any given time.
+    Answer 1.
+    var Minimal_Angle = (h, m) => 
+    {
+          let ha=0.5*(h*60+m);
+          let ma=6*m;
+          let angle=Math.abs(ha-ma);
+          angle=Math.min(360-angle,angle);
+          return angle;
+    };
+    Question 2.Check whether the year is Leap year or not.
+    Write a program which takes an year N as input from the user and find out whether the given year is a Leap Year or not.
+    Answer 2.var Check_Leap = (year) => 
+    {
+     if ((year%4==0) && (year%100!=0) || (year%400==0)){
+       return "Leap Year";
+       }
+       else {
+         return "Non Leap Year";
+       }
+       };
+       Question 3.Perfect Number Check.
+       Have you heard of Perfect numbers? If not let me tell you what is it, Perfect Numbers are integers that are equal to the sum of all its divisors except that number itself.
+       Now, You are given an integer N, write a program to check whether the given number is a Perfect Number or not.
+       Answer 3.var Perfect_Check = (N) => 
+       {
+       var temp = 0;
+          for(var i=1;i<=N/2;i++)
+            {
+                if(N%i === 0)
+                 {
+                   temp += i;
+                 }
+            }
+          
+            if(temp === N && temp !== 0)
+               {
+               return "YES";
+               } 
+            else
+               {
+             return "NO";
+               }   
+        };
+        Question 4.Reverse a Number.
+        Write a program which takes a numebr N as input from the user and You need to reverse the number.
+        Answer 4. 
+        var Reverse_Number = (N) => 
+        {
+          N=N+'';
+          let rt=N.split('').reverse().join('');
+          let rn=parseInt(rt,10);
+          return rn;
+        };
+ Question 5.Substring Check.
+ You are given two strings S1 and S2, you need to check whether the string S1 is a substring of string S2 or not. 
+ Answer 5.
+ var Substring_Check = (S1, S2) => 
+ {
+   const result = S1.includes(S2);
+   if(result===true){
+     return "YES";
+     }
+     return "NO";
+   };
+  
+        
+       
+    
+     
+    </pre>
+</body>
+</html>
